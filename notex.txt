@@ -1,0 +1,979 @@
+# starting page should be named index.html as hosting identify first page as index.html
+
+#pseudo classes in classes
+    - used to define a special state of element
+    - syntax
+        - selector:pseudo-class {
+            property:value;
+        }
+
+# grid system - used to arrange html elements in either row/column with specified width for column
+# linear gradient - 
+# animation - animation is defined using @keyframes
+    -animation works only for block element
+
+#animation external libraries
+    - animate.style
+    - aos animation
+    - locomotive
+
+#deploying
+    -free
+        -- netlify
+
+
+------------------------------------------------------------
+                        BOOTSTRAP
+------------------------------------------------------------
+
+1. FRAMEWORK : collection of pre-defined data, that can be used by developers
+        - boostrap ***
+        - tailwind css ***
+        - bulma ***
+        - Materiallize
+        - Milligram ***
+        - Semantic UI
+        - Skeleton ***
+        - Blaze UI
+        - Tachyons
+        - Spectre
+        - Chota
+        - Material Design
+        - Open Props
+        - Water
+        - Primer
+        - Foundation ***
+        - UIkit ***
+2. BOOTSTRAP : build fast and responsive websites, uses predefined class of styles
+3. To use boostrap in a webpage
+    - link boostrap with webpage
+4. Commonly used boostrap classes
+    - container / container-fluid
+    - m/mt/mb/ms/me-1/2/3/4/5 
+    - border / border-colorName
+    - primary/danger/success/warning/secondary/light/dark/info colors
+    - p/pt/pb/ps/pe-1/2/3/4/5
+    - bg-colorName
+    - text-center/start/end
+    - text-colorName
+    - img-fluid
+    - w-25/50/75/100
+    - img-thumbnail
+    - fw-bolder 
+    - fs-1/2/3/4/5
+    - btn btn-colorName btn-outline-colorName
+    - d-flex justify-content-evenly
+    - grid in BOOTSTRAP
+        -- row:max 12 equal parts division is possible by using "col-partNumber"
+        -- col divide row
+    - responsive breakpoints class: sm/md/lg/xl/xxl
+
+-------------------------------------------------------
+            JAVASCRIPT - Dynamic Programming Language
+-------------------------------------------------------
+>JavaScript is a dynamic language and not static, which means that variables can hold values of different types during runtime.
+> Node.js - runtime environment for js outside the browser
+    - check node js : node -v
+> Basic concepts JS :
+    - Displaying contents : console.log("content to be displayed")
+    - to join different datatypes
+        - use comma
+        - use plus : concantenation
+        - use template literals : use back tick (`)
+    - Data types in JS :
+        - number
+        - string : content within a quotes "" or ''
+        - comments : // or """ """
+        - boolean : true(1)/false(0)
+        - undefined : no value for variable
+        - object : array
+    -variables : used to store data
+        - create variables : 
+            - variablesName = value;
+            - var variablesName  (hoist + undefined)
+            - const variablesName (hoist + ReferenceError: Cannot access 'num1' before initialization)
+            - let variablesName (used inside a block of code)
+    
+    - Identifiers : are rules to set up name for variables
+    - Hoisting : using a variable/data before creating or initializing it.
+            - hoisting is a behavior in which a function or a variable can be used before declaration
+    - Difference between var, const and let variables
+        var                          const                         let
+        **************************************************************************
+            1.  use var keyword          use const keyword              use let keyword
+            2.  can ressign value        not reassignable               can reassign value
+            3.  global scope             block scope                    block scope
+            4.  hoisted with value       hosited without assign value   hosited without assign value    
+
+    - Operators
+        - assignment operators: =
+        - arithmetic Operators: + - * / % ** return a number
+        - relational operators : > < >= <= != == === return a boolean
+        - logical operators : && || ! return a boolean
+            - and &&
+              ******
+                T && T = T
+                T && F = F
+                F && T = F
+                F && F = F
+
+            - or ||
+              *****
+                T || T = T
+                T || F = T
+                F || T = T
+                F || F = F
+
+            - not !
+              *****
+                !T = F
+                !F = T
+        - Increment / Decrement operators: ++ --
+        - shorthand operators: += -= *= /= 
+        - Ternary operator : conditon ? true statement : false statement;
+        - Truthy operator: conditon && statement
+        - Spread operator : used to spread iterating variables to single array, operator : ..., destructuring
+        - Rest operator : used to expand rest of the value to an array using ...,Use … to collect additional arguments into an array.
+
+    - Conditional Statements
+        - if statement : 
+            - syntax : if (condition) {if body excecutes when condition is true}
+        - if-else statement :
+            - syntax : if(conditon)
+                        {
+                            executes if condition true
+                        }
+                        else
+                        {
+                            executes if condition false
+                        }
+        - else-if ladders :
+            - syntax : 
+        -switch (expression)
+        {
+            case 1: statement
+                    break;
+            .
+            .
+            .
+            case n: statement
+                    break;
+            default: statement
+        }
+
+    - looping statements: same task should repeat multiple times
+        - while loop :
+                    syntax :1.initialise a variable
+                            2.while(condition)
+                            {
+                                statements
+                                3. change the value of  condition variable inside the loop
+                            }
+                            
+        - for loop :
+                    syntax : for(initialise a variable;condition;change the value of  condition variable inside the loop)
+                    {
+                        statements
+                    }
+
+                    - break statement : used to exit from a loop 
+                    - continue statement : used to skip certain values in a loop
+
+                    - for (let/var variablesName of arrayName){}
+                    - for (let/var index in arrayName){}
+                    
+        - nested loop : a loop inside another looping
+            - outerloop
+            {
+                innerloop
+                {
+                    
+                }
+            }
+    
+    - FUNCTIONS : used to perform specific task
+        -function definition : defining task to be performed
+            - syntax : funtion funtion_name(arg1, arg2,....argn)
+                        {
+                            funtion body - defines the task
+                        }
+        -Function call : to execute funtion we have to call
+            - syntax : funtion_name(arg1,arg2,....argn)
+        -return statements
+        - Types of functions    
+            - Arrow Functions : alterntive of normal function declaration
+                - syntax : var/let/const functionName = (arg1,arg2,....argn) => {funtion body - defines the task}
+            - Predefined functions :  console.log()
+            - Callback function : A function definition inside another function call
+            - Anonymous function : nameless funciton / self executing function
+            - Recursive function : Calling the function inside its own definition
+            -nested function : A function definition inside another function definition
+                - inner nested fucntions can access variable of it parent function and global function but parent function can't access child variables
+                - closure property in Js : in nested function child function can access both its variable as well as its parent variable but parent cannot access variable of child.
+
+            - Currying function : used to  transform the function of multiple argument into several functions of single argument
+            - Higher order function: function that accept another function as argument and it will return function 
+    
+    - ARRAYS : used to store multiple values in a single variable
+        - syntax: arrayName = [arrayValue1, arrayValue2,.......,arrayValueN]
+        -Array methods
+            - length 
+                - to find length of array : arrayName.length
+            - typeof
+                - to find type of array : typeof arrayName
+            - push(item)
+                - to insert an element to end of array : arrayName.push(arrayValue)
+            - unshift(item)
+                - to insert an element to starting of array : arrayName.unshift(arrayValue)
+            -pop()
+                - to delete an element to end of array : arrayName.pop()
+            -shift()
+                - to delete an element to starting of array : arrayName.shift()
+            -sort()
+                - used to sort an array digit by digit : arrayName.sort()
+            -sort(callback)
+                - used to sort an array numbers: arrayName.sort(callback)
+            - forEach((arrayValue, arrayIndex)=>statement)
+                : alternative for for-of loop , to iterate an array and it wont return anything
+            - map(callback) 
+                : return a new array with values after mapping function to an existing array
+            - filter(callback)
+                :   return a new array with items satisfying the condition applied to the existing array
+            - find(callback) 
+                : return a single value whichh satisfying the condition applied to the existing array
+            - reduce(callback) 
+                : return a single value (largest/smallest/total sum) after applying reduce function to an existing array
+            - reduceRight(callback)
+                :same syntax as reduce, used to find first element with same value as the condition satisfies
+            - some(callback) 
+                : return a boolean value after applying a condition to an existing array. atleast one needs to satisfy the condition
+            - every(callback) 
+                : return a boolean value after applying a condition to an existing array. all elements needs to satisfy the condition
+            - flat(depth) 
+                : usd to reduce dimension of an array, if depth is "infinity" then flat method always return a single dimension array
+            - includes(key)
+                : used to return a boolean value based on key present in the array or not
+            - indexOf(key)
+                : return index of array item
+            - reverse()
+                : reverse an existing array and change the order
+            - join(separator)
+                : return a string separated with separator
+            - slice(start, end)
+                : display a part of array
+            - splice(start index, count)
+                : used to remove/replace items from an array
+            - concat(array)
+                : used to concatenate two arrays
+
+        - Array.from()
+            : used to form arrays of iterating variables 
+            : array method included in the array data structure.
+    - Searching Techniques
+        - Linear Search
+        - Binary Search - lower complexity but require sorted array
+
+    - String : collection of characters and enclosed in either single or double quotes.
+        -String methods
+            - substring()
+            - slice()
+            - toUpperCase()
+            - toLowerCase()
+            - startsWith() boolean case sensitive
+            - endsWith() boolean case sensitive
+            - trim() : removes whitespaces from start and ending of the string
+            - split('')/split(' ')
+            - eval(expression)
+            - includes()
+
+    - Object    : used to store multiple values, 
+                : store data as key:value pair,
+        - create an object : object name : {key:value}
+        - to access values from an object 
+            : use Bracket notation : objectName["key"]
+            : use Dot notation : objectName.key
+        - check if a key is present in an object 
+            : operator 'in' : objectName in "key"  - returns boolean
+            : hasOwnProperty() : objectName.hasOwnProperty(key) - returns boolean
+        - insert data to an object
+            - objectName["key"] = value / objectName.key = value
+            - Object.assign(target-object, source)
+        - update value of an existing object
+        - Object.keys(objectName) : display all keys inside the object
+        - Object.values(objectName) : display all values inside the object
+        - Object.entries(objectName) : convert the object to array (nested array)
+        - delete keyword : delete objectName.key
+        - object destructuring : const {key1,key2,...,keyn} = objectName
+
+    - handling runtime errors in JS
+        - try-catch-finally block
+    - OOPs - Object oriented Programming
+        - class : blue print of object , class keyword is used to create a class
+        - object : real world entity, to access class features outside the class create object
+            - syntax : objectName = new className()
+        - reference : used to link class with its properties
+        - OOPs features
+            - Inheritance
+                - classical inheritance : use extends keyword
+                - Prototype Inheritance : use __proto__ keyword
+            - Polymorphism implemented through rest operator
+            - Abstraction : Hiding the implementation/important details from user
+            - Encapsulation : data inside another data
+
+    - Modules in JAVASCRIPT : used to communicate data from one js file to another
+        - 'export' / 'export default' keyword : used to export data/function from a js file.
+        - import keyword : used to access content exported from a js file.
+
+
+-------------------------------------------------------
+            JAVASCRIPT - Scripting Language
+-------------------------------------------------------
+
+    1. Provide Behavior to HTML elements
+    2. Applying JS in webpage
+        - Internal JS : using script tag to define JS in html
+        - External JS : using script tag to link external JS to html page
+    3. DOM : Document Object Model
+        - Which is a tree representaion of a webpage, every tree must have a single parent node, js can access DOM using 'document' object
+    4. Selecting HTML elements to JS
+        - use tag name : document.getElementByTagName('tagname')
+        - use id name : document.getElementById('id') / id
+        - use class name : document.getElementByClassName('className')
+        - use querySelector : document.querySelector('#id/.className/tag')
+            - get the first one that satifies the condition
+        - use querySelectorAll : document.querySelectorAll('#id/.className/tag')
+    5. HTML events : Mouse related events, Keyboard related events, Touch related events, etc.
+        - user will trigger events to change the behaviour of a web page
+    6. Binding Events : eventName = function-name(), define the behavior in a function and call the function when an event is occur in a html element
+    7. Access/updating content of an HTML element
+        -innerHTML
+        -innerText
+    8. Permanent storage in browsers
+        - local storage : data stored as key and value pair, but here both key and value type must be 'string'
+            - setItem(key,value) : data will be stored in local storage
+            - getItem(key) : get datas stored in local storage
+            - removeItem(key,value) : remove datas stored in local storage
+        - Session Storage : 
+    9. API - Application Programming Interface
+        - REST (Representational State Transfer) API : uses in client server app, HTTP request, pass different types of data (JSON, XML, binary....) via its body.
+        - SOCKET, GRAPH : real time communication
+        - URL : Uniform Resourse Locator ex: https://www.geeksforgeeks.org/courses/dsa-to-development-coding-guide?itm_source=geeksforgeeks&itm_medium=newui_home&itm_campaign=courses
+            - Base url : https://www.geeksforgeeks.org 
+            - URI : Uniform Resourse Identifier - https://www.geeksforgeeks.org/courses
+            - Path parameter
+            - query parameter : comes after ?
+            - body parameter :
+        - Protocols - HTTP (Hyper Text Transfer Protocol)
+            - HTTP Request : 2 parts; Header part: stores secure data, body part: stores data to be shared 
+                - GET : used to read / get data from another app
+                - POST : used to create data in an app
+                - PUT : used to update entire data already in their app
+                - PATCH : used to update partial data already in their app
+                - DELETE : used to remove a data from an app
+
+            - HTTP Response, status code
+                - 1xx : Informational
+                - 2xx : Success**
+                - 3xx : Redirection
+                - 4xx : Client errors**
+                - 5xx : Server errors**
+    
+        -JSON : JAVASCRIPT Object notation, data stored as key-value pair, but type of key must be string, {"key":value}, is the format data to be transfer within internet.
+        
+** js is single threaded programming language because it has only one call stack to resolve functions
+** Event loop monitors the stack and queue in js.
+
+    10. Handling functions in JS 
+        - Synchronous Functions : execute without any time delay
+        - Asynchronous Functions : executes after a time delay  - js uses event loop resolve asynchornous functions
+            -Handling Asynchronous function in JS
+                - callback function : may lead to callback hell
+                - promise : used to resolve api call 
+                    - ever promise has 2 statements
+                        - resolved state : whenever we get a response for a request; to access response from resolves state, js uses 'then' method; syntax : then(callback), response will be in the callback
+                        - reject state : if user doesnot get any reponse for its request; to access reject state, use js 'catch' method; syntax : catch(callback), reject request will be in the callback
+                        - Async - Await keyword : Resolve promise without using callback, we can use async keyword only in a function definition, to get response from a promise use await keyword
+            - Different type of Asynchronous function in JS
+                - callback function - callback queue
+                    - callback hell - nesting of multiple callback function
+                - API calls - Micro task queue (priority queue) Handling api call (AJAX : Asynchronous JAVASCRIPT XML, using js make api call)
+                    - using XMLHttpRequest class
+                    - using fetch method : based on promise
+                    - using axios library : based on promise
+
+
+------------------------------------------------------------
+            REACT - FRONT END TECHNOLOGY : JS LIBRARY
+------------------------------------------------------------
+
+    1. React Basic concepts
+        - React App: Collection of JS libraries, used to build a Single page Application. 
+        - React App is a collection components, components used to display content in browser, every components are arranged as a tree structure in react app, root node / root component of react app will always "App" Component.
+        - Pure Function : used to build components, which does not cause side effects
+        - Declarative Approach 
+        - Virtual DOM :Light weight representation of real DOM, it helps faster loading of contents in app
+        - Babel Library - Transpile React code to simple react functions which is understood by browser, convert react components into basic tech.
+        - JSX (JAVASCRIPT XML - JAVASCRIPT extension for HTML code) - used to display contents in browser
+            - JSX element : const heading = <h1>Heading</h1>
+            - Rules of JSX code 
+                - Every JSX element must be in a parent tag, this container tag can be div/section/article... or React Fragment (tag without name) <></>
+                - Every JSX element must have ending/closing tag, <tag-name>content</tag-name> or <tagname/> (self closing tag : used to represent tag without content)
+                - JSX follow camel case (if a word has 2 word then second word first letter must be in capital case)
+                - Instead of using attribute 'class' use 'className'
+                - Instead of using attribute 'for' use 'htmlFor'
+                - use JS code directly in JSX, use {} to provide js code in JSX, ex: {js code}
+
+    2. React App Creation
+        - CRA - using create-react-app Command
+        - Vite - is a web project building tool
+            - install vite globally: npm i -g create-vite
+            - react app using vite : npm create vite@latest or npm create vite@latest reactAppName -- --template react
+            - npm run dev
+            - to get build file for deploy : npm run build, use dist folder for deployment
+
+    3. File and Folder structure of React app using Vite
+        - package.json file : npm configuration file
+        - package-lock.json : used to store version history of packages used in the project
+        - .gitignore file : used to mention data to be ignored while adding to git
+        - eslint.congif.js : js configuration 
+        - index.html : entry point, its body must contain a div with id as root and script as
+        - node_modules folder : used to store external package dependencies in local project (if u have package.json file then to generatre node modules use command : npm install) 
+        - public folder : data inside public folder available globally in project
+        - src folder : define logic of react app here
+            - main.jsx file : createRoot used to render react app in DOM element with id as root
+            - index.css / App.css files: used to style jsx elements
+            - App.jsx file : root component of react App
+            - assets folder : used to store media files used in our react app.
+    
+    4. Components in React : used to display contents in browser    
+        - To create a component in react : 2 ways, create a js/jsx file and its file name must start with capital letter
+            - Functional based Components / Stateless Components : it has to use js pure function with its name as its file name and function must return jsx code
+            - Class / Statefull Based Components
+
+        - Difference between class v/s functional based component 
+            Class Based component                          Functional Based component
+            -------------------------------------------------------------------------
+            1.Using js class to inherit from            1. using js pure function and return jsx
+            react component, and render JSX
+            2. Component will live depending on         2. It executes from top to bottom, once it returns, it cannot be alive
+            different life cycle methods
+            3. Statefull component                      3. Stateless Component
+            4. Do not use Hooks                         4. Hooks are used
+            5. Lifecycle mwthods available              5. Lifecycle methods are not available
+            6. Uses render method to display JSX        6. No need to use render method
+            into DOM
+            7. use constructor to initialise state      7. No need to use constructor
+
+    5. Data Sharing in React App
+        - Parent to Child Data sharing : child can access data form parent using 'props'
+
+    6. Props in React : props mean property of a component, and props will be the arguments of the components, and its type is object, used to transfer data from parent to child.
+    7. Conditional Rendering : based on a condition display jsx elements into browser, use if-&&, if-else - ?: these operator to render jsx into browser
+    8. CSS styling in React :
+        - Inline CSS : using style attribute, can pass style as an object, style = {{property:value,....}}
+        - External CSS : define css style in an external file and to apply style we have to import css file in component
+            - import 'css file path'
+        - CSS module file : use extension .module.css file, here it can import to a variable in a component, define style using class in module css file.
+    
+    9. Event handling in React : according to each event jsx element has to bind/call a function
+        - Calling function without arguments : event = {functionName}
+        - Calling function with arguments : event = {()=>{functionName(arg1,...)}}
+        - Calling function with argument as event: event = {(event)=>{functionName(event)}}
+
+    10. Array in React JSX : use' map' method to display array in JSX, to uniquely identify each item use 'key' props
+
+    11. State : used to store values in a component, whenever state changes then component will re render.
+        - to update state : use setState(value)
+
+    12. Lifecycle Methods of React Component    
+        - Mounting Phase: Putting component into DOM
+            - constructor()
+            - getDerivedStateFromProps()
+            - render()
+            - componentDidMount()
+        - Updating Phase : when component updating
+            - getDerivedStateFromProps()
+            - shouldComponentUpdate()
+            - render()
+            - getSnapshotBeforeUpdate()
+            - ComponentDidUpdate()
+        - Unmounting Phase : Removing component from DOM
+            - componentWillUnmount()
+
+    13. React Hooks : used to provide react component features to functional based component, they are predefined functions, that function name must start with 'use' keyword, to use hooks in functional component must call it
+        - Rules to use hook in Functional component
+            - Import Hook form react in component
+            - Call hooks in top level of a Component
+            - Hooks cannot be Conditional
+        - Types of Hooks
+            - Predefined Hooks
+                - useState(initial-value) : used to create state in functional component, it will return state value, function name to update state value and stored in an array 
+                - useEffect(sideEffectFunction, dependency) : used to provide side effects to the component
+                    - sideEffectFunction : used to define which side effects to be applied in component
+                    - dependency : used to control when useEffect hook must call in a component
+                        - no dependency : useEffect hook will call all the time in component(it become an infinte loop)
+                        - [] : useEffect hook will call only at the time of component Creation
+                        - [state/props/variable] : useEffect hook will call at time of component creation as well as changes in the value state/props/variable passed in the dependency.
+                - useParams() : hook used to access path parameter from a url
+                - useNavigate():navigate to different pages
+            - Custom Hooks : userdefined hooks
+                - Create a function with a name starts with 'use'
+
+    14. External React Component libraries
+        - Materieal UI : npm install .......
+        - React boostrap : npm install react-bootstrap bootstrap. include a bootstrap theme (https://bootswatch.com/) to react app. for that download bootstrap.min.css file and add to src folder, import file to main.jsx file
+        - Tailwind CSS : 
+
+    15. Handling forms in React
+        - Controlled component : in a componen, form data is managed by component state
+        - Uncontrolled Component : form data is managed by DOM reference in a component , to get reference use useRef Hook in react
+
+    16. Set up path for component in React : use package : react-router-DOM
+        - install react-router-dom : npm i react-router-dom
+        - Steps to set up path for component
+            - render react root app inside BrowserRouter component form react-router-dom library
+            - Component need to setup path must be render inside 'Routes' component of react-router-dom inside app.jsx
+            - to define path, we have to 'Route' Component and use key as path to define 'path' and 'element' key to display the component
+        - Link component : used to redirect from one page to another without reloading the current page
+
+    17. API call in react : using Axios library
+        - installing axios : npm i axios
+        - create a folder in src for making all api call
+    
+    18. Data sharing between component in react
+        - Using props: state lifting - is a data sharing mechanism in react app, where state to be shared must be lifted to their common parent, then parent will share the state updating function to the component who wanted to share data 
+        - using REDUX library
+        - using Context API
+
+------------------------------------------------------------
+        CONTEXT API : Data sharing method in react
+------------------------------------------------------------
+    1. Avoid props drilling while shairing data between components
+    2. To share data it uses context of react, with the help of context we can share data inside it
+    3. Steps to perform data sharing using contect api
+        - create context : use createContext() method in React
+        - Use provider of context to share data to the components, provider value key will help context to share data, we can pass value as object
+        - To access context context from component : use useContext hook, useContext(context-name) will give data shared via context
+    4. create a folder for context
+        - inside the folder create react component for performing data sharing using context
+        - create context and export it
+        - create state inside component
+        - use context provider provide the state as its value to the component children
+        - use children props isnide the component to get all children of it 
+        - wrap the component inside root component of react app inside main.jsx file
+
+
+------------------------------------------------------------
+            JSON SERVER CREATION
+------------------------------------------------------------
+
+    1. Create a folder to store json file
+    2. create package.json (npm configuration file) file inside server folder : npm init -y
+    3. install json-server package to run a json file : npm i json-server / npm i json-server@0.17.4
+    4. create db.json file inside server folder to store json data form frontend application
+    5. to run json file and see output in http://localhost:3000/ : npx json-server db.json / node index.js
+
+------------------------------------------------------------
+            DEPLOYING A JSON FILE USING NODE
+------------------------------------------------------------
+
+    1. create a index.js file in server folder
+    2. update the script key as "start":node index.js in json server package.json file 
+    3. update json-server version to a stable one if it is a unstable version like alpha/beta version
+    4. create .gitignore file in order to add node_modules folder
+    5. Define json-server to run json file in index.js file.
+        - import json-server in index.js file
+        - create server for running json file for that use create() from json-server package
+
+
+
+<iframe width="996" height="560" src="https://www.youtube.com/embed/9hlo87E_GdQ" title="5 CLEVER Electrical Tricks Everyone Should Know" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+------------------------------------------------------------
+                        REDUX - STATE MANAGEMENT lIBRARY
+------------------------------------------------------------
+    - A JS library for predictable and maintainable global state management
+    - Redux is a state management tool which avoid props drilling in react application.
+    - Can be used when same data is to be used in different components
+
+    1. to install Redux, need to install 2 libraries
+        - react-redux - official react binding for redux
+            - npm install @reduxjs/toolkit
+        - redux-toolkit - The official, opinionated, batteries-included toolset for efficient Redux development 
+
+Import API in redux
+
+    - configureStore() - used to create store. create a js file and call configureStore method,
+        - To provide store to react app, use Provider component and pass our store to its property "store" in main.jsx
+    -Provider - provides redux store to the react file globally
+    - CreateSlice() - create reducer and action together, returns action and reducer
+        - used to combine bboth action (logic to update) and reducer (updated state that is output action), acceepts an object of reducer functions, a slice name, and an initial state value, and automatically generates a slice reducer with corresponding action crators and action types.
+    - createAsyncThunk(): accepts an action type string and a function that returns a promise, and generates a thunk that dispatches pending/fulfilled/rejected action types based on that promise
+        - used to make api call using action. 
+        - will return promise
+        - we can resolve promise in 3 ways as pending/fulfilled/rejected
+        - we can pass three arguments to this action - a string action type value, a payloadCreator callback, and an options object
+        - To define action type string use 'slice-name/action-name',inside payloadCreator callback call api call. 
+            * extraReducers of slice is used to resolve promise based action. Every xtraReducer has builder object. using builder object reducer can add different cases of promise.
+2. Hooks used in componente while handling state using Redux
+        1.useDespatch - action can be excecuted by component using useDespatch.
+            - return a function capable of dispatching/executing action from a component
+                - Dispatching action without argument
+                - Dispatching action with argument
+        2.useSelector() - reducer can be accessed by component using useSelector.
+        
+
+
+
+------------------------------------------------------------
+                MONGODB - DATABASE
+------------------------------------------------------------
+    1. Database is used to store and manage data permanently (MySQL, SQL, MSAccess, MongoDB, Oracle...)
+    2. MongoDB -is a NoSQL database, data stored as JSON documents, it is stored in memory as BSON ({"key":value}), to store multiple json documents is known as collection.
+
+    3.Difference between Sql and MongoDB
+
+        SQL                                          MONGODB
+     --------------------------------------------------------------------------
+        1. Relational SQL DBMS                  1. Document oriented NoSQL DB
+        2. Data stored in Table, every          2. Data stored in Collection, 
+        table must have rows and fixed column       as JSON document
+        3. uses Fixed Schema                    3. uses dynamic Schema
+        4. Support rich set of data types       4. Limited set of datatypes
+        5. uses in traditional applications     5. used in big data and real 
+                                                time app
+        6. optimised for complex join and       6. Optimised for scalability &  transactions                                perforamance
+
+    4. MongoDB in the following environments:
+        - MongoDB Atlas :  The fully managed service for MongoDB deployments in the cloud
+        - MongoDB Enterprise : The subscription-based, self-managed version of MongoDB
+        - MongoDB Community : The source-available, free-to-use, and self-managed version of MongoDB
+
+    5. MongoDB Shell/ mongosh : is the terminal used to write MongoDB codes
+    6. Collections : used to store json documents, to name a collection use small letters in its plural format.
+    7. _id : MongoDB generate a unique value to identify each document in a collection using _id key and its value is a hexadecimal number.
+    8. CRUD operations performed in MongoDB
+        -CREATE
+            - to insert a single doument to MongoDB collection : use insertOne({})
+            - to insert a multiple douments to MongoDB collection : use insertMany({})
+        - READ
+            - to get/read a single documents from MongoDB collection : use findOne({key:value})  which return the entire document when the key and value is presnet in collection otherwise return 'null'
+            - to get/read all documents from MongoDB collection : use find({key:value})  which return the entire document when the key and value is presnet in collection otherwise return 'null'
+            - to get total count of doucments - countDocument()
+            - to limit documnets while getting from a collection : use limit(count)
+                -eg: db.users.find().limit(3)
+            - to skip documnets while getting from a collection : use skip(count)
+            - to sort documnets while getting from a collection : use sort({key:1/-1})
+                -eg: db.users.find().skip(4).sort({"uname":1})
+            - to get documents after applying  different query statements use $ symbol : $gt/$gte/$lt/$lte/$eq/$neq/$exists/$regex
+                - db.users.find({username:{$regex:"M"}})
+                - db.users.find({username:{$regex:"m", $options:"i"}})
+        - UPDATE
+            - to update a single document to MongoDB collection : use updateOne({key:value},{$set:{key:value}})
+                $set / $inc / $dec / $push / $pull
+            - to update multiple documnets : use updateMany()
+        - DELETE
+            - to delete a single document : deleteOne({key:value})
+            - to delete multiple document : deleteMany({key:{$exists:true}})
+    9. Aggregation : used to combine/joining two collections in MongoDB
+        - using $lookup : does left outer join to a collection in same database
+            - syntax : collection-name.aggregation({
+                                                    $lookup: 
+                                                    {
+                                                        from: <collection to join>,
+                                                        localField:<field from the input documents>,
+                                                        foreignField:<field from the documents of the "from" collection>,
+                                                        as:<output array field>
+                                                    }
+                                                })
+
+------------------------------------------------------------
+SERVER SIDE/BACKEND:used to resolve client/front end request
+------------------------------------------------------------
+
+    NODE JS: provide runtime environment for js outside the browser
+    --------------------------------------------------------
+        1. is a freer open-source, cross platform runtime environment that lets us to create servers(used to resolve multiple client request), web apps, command line tools and scripts.
+        2. Features
+            - Extremely fast
+            - Asynchronous Functions
+            - Highly scalable
+        3. Node js Global Objects : Objects can be accessed thorughout node app without importing it, eg: "process" objects , 'environmental variable' in process used to store system configuration / secret data/ password of a application
+        4. Node js Module system : used to share data from one file to another file, using 'CommonJSModule' system.
+            - to import data from a file :  require('package-name/file path') : to import data from a file/package
+            - module.exports / exports keyword : to export data form a file
+            - Predefined / Built in Modules in Node js
+                - fs Module : to handle file system of a computer
+                - http Module : used to create http server
+                - https Module : used to create https server
+                - events Module : manage userdefined events
+                - crypto module : 
+        5. Execution Model : Event-Driven, non-blocking I/O model, optimised Asynchronous task
+        6. API Access : access to system level API ( file system, network, process)
+        7. Working of Node Js : used to resolve client request  and send response while working with single thread 
+            - non Blocking I/O
+            - Asynchronous function
+
+------------------------------------------------------------
+    EXPRESS JS : node js framwork used to server creation
+------------------------------------------------------------
+    1. uses in client-server application, to create server with node js features 
+    2. Steps to create EXPRESS server for resolving client request
+        - create a server folder for server application
+        - create package.json file inside server folder, use command : npm init -y
+        - Update package.json file script key value as the following object, 
+            {"start" : "node index.js"} and remove its test key and value from it
+        - install packages needed to create node server app
+            - express package : used to create server - npm i express
+            - cors package : used to enable cross origin resorce sharing - npm i cors
+            - dotenv package : used to load content .env file into process object - npm i dotenv
+            - mongoose package : npm i mongoose
+            - jsonwebtoken : used for authorization - npm i jsonwebtoken
+            - multer : used for handling mutlipart-formdata request - npm i multer
+            - mongoose : handles connection with mongodb - npm i mongoose
+            - nodemon : run server app using command nodemon index.js - npm i nodemon
+        - create .env file in server folder, which used to stoer environmental variables of a project/app
+        - create .gitignore file in server folder, which used to store file/folder to be ingored whiel adding to git, and add node_modules, .env into the file contents
+        - create index.js file in server folder to define express server for resolving client request from browser 
+            - import express, dotenv, cors in index.js file
+            - create express server using express package
+            - use cors in our server app, to enable data sharing between different application
+            - use express.json() in server app for parsing json data from client request
+            - create a port for server application
+            - run server app in specified port
+            - run server app using command : node index.js
+            - to resolve http request using express server: express-server-name.httpRequestMethod('path',(request,response)=>{
+                using response object share server response to client
+            })
+            - server has to use express.static() to export the static file/folder from server
+        - How to set up path / url for resolving client request in server
+            - create routes folder in server folder and create a js file inside the routes folder for defining path / route corresponding to client request
+            - steps to define path in js file
+                 - import express , dotenv, cors in index.js file
+                - create express server using express package
+                - use cors in our server app , to enable data shairing between different application
+                - use express.json() in server app for parsing json data from client request
+                - create a port for server app
+                - run server app in specified port
+                - run server app using command : node index.js / nodemon index.js
+                - to resolve http request using express server : express-server-name.httpRequestMethod('path',(request,response)=>{
+                   using response object share server response to client
+                })
+                - server has to use express.static('static file/ folder path') to export the static file / folder from server
+        - To set up controller for server app: used to define loginc to resolve client request 
+            - create a controller folder in server, and create a js file inside ti for definigg lofic to resolve client request
+            -export each controller logic from js file
+            - import controller in router.js file and use the controller in corresponding request
+            -syntax of controller
+                - controller-name = (request,response)=>{using response object share server response to client}
+            - import model 
+        - To set up database connection from nodejs server
+            - create a folder for defining db connection
+            - inside db folder create js file to define connection steps
+                - import mongoose
+                - get db connection string form MongoDB Atlas to js file
+                - to connect with MongoDB use connect method of mongoose pass connection string as argument, it will return promise
+                - import js file in index.js file
+        - To set up model for communicating nodejs and MongoDB
+            - create model folder in server folder
+            - create a js file inside the folder for creating model 
+                - import mongoose
+                - create an object for the schema class
+                - create schema for that Object
+                - create model 
+        - To setup Authorization using middleware 
+            -create folder for middleware in server folder
+            - create a js file inside folder to define middleware, export middleware
+            - use middleware in route before controller
+        - To handle multipart-formdata  request using Multer
+            - create js file inside middleware folder
+            - import multer
+            - create a 'uploads' folder in server folder for storing uploaded file
+            - define multer storage using diskStorage method of multer in js file
+            - created Multer instance using the storage and export it form that file, use it in route
+
+Express.js MVC Structure - Model, View and Controller
+-----------------------------------------------------
+Controller - request resolving logic
+Model - a mode corresponding to database
+      - only controller communicates with model 
+
+
+
+------------------------------------------------------------
+    MONGOOSE : node js package for mongodb data modelling
+------------------------------------------------------------
+    1. Mongoose is an ODM (Object Data Modeling) library for MongoDB, helpd to create and manage MongoDB documents with nodejs
+    2. Install Mongoose in nodejs app : npm install mongoose
+    3. Schema : a schema defines the structure of your collection documents: A mongoose scheme maps directly to a MongoDB collection. To create scheme we have to create object for mongoose "Schema" class.
+    4. Models take your schema and apply it to eah document in its collection. Create model in mongoose, use model method, syntax model('model-name',schema)
+        - Models are responsible for all document interactions like creating, reading, updating, and deleting (CRUD).
+    5. In nodejs app, controller will communicate with model inorder to manage data in mongoDB database.
+    6. CRUD operations in mongoose  
+        - to CREATE a document using mongoose in MongoDB, create an object of model with same order of schema, after that we have to save the object inroder to appear changes in MongoDB using save() method in mongoose
+        - READ/get documents from MongoDB using Mongoose : find(), findOne(), findById()
+        - UPDATE a document : updateOne(), updateMany(), findByIdandUpdate(_id of document,update query)
+        - DELETE a document : deleteOne(), deleteMany(), findByIdandDelete(_id of document)
+
+    7.
+
+
+------------------------------------------------------------
+JSON WEB TOKEN : node js package for authentication
+------------------------------------------------------------
+    1. Install jsonwebtoken library :npm install jsonwebtoken
+    2. Token generation using jwt : sign(payload, password)
+        - payload : used to store data inside token creation
+    3. Token verrify using jwt: verify (token,password) return a response if token is verified else error.
+    4.install multer : npm i multer
+    5. multer can be used to define storage space for uploaded file
+
+------------------------------------------------------------
+                MIDDLEWARE : nodejs
+------------------------------------------------------------
+    1.Used to control request-response cycle in server. Before resolving a request server can perform any task (authorization, data format changing etc ....) using middleware.
+    2. Middleware are function, with 3 arguments, they are request, response, next. 
+        - request - will give the client request
+        - response object will give response form server to client,
+        - next method used to control request
+    3. Middleware can be of 2 types
+        - Application specific middleware :  middleware will active for all client request
+        - router specific middleware : middleware will active for only selected route/path
+
+------------------------------------------------------------
+MULTER: nodejs middleware for handling multipart/form data
+------------------------------------------------------------
+    1. Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. 
+    2.Multer adds a body object and a file or files object to the request object. The body object contains the values of the text fields of the form, the file or files object contains the files uploaded via the form.
+
+
+------------------------------------------------------------
+        Steps to Build MERN Project
+------------------------------------------------------------
+
+    1.Create vite react app for front end
+    2. remove the unwanted code
+    3. Install CSS styling library
+    4. Create pages folder for different pages of react app, inside we create component file
+    5. set up path/url/route for each pages of react app
+    6. create component folder for holding part of different pages of react app, inside we create component file
+    7. complete style all the components
+    8. setup API call in react app:
+            - install axios
+            - create services folder in src folder
+                - create 3 files, server url file, 
+
+
+
+------------------------------------------------------------
+                ANGUALR
+------------------------------------------------------------
+
+    1. open-source web app framework developed by google, used to build dynamic single page application
+    2. official site - angular.dev
+    3. Angular installation 
+        - Install Angular CLI : npm i -g @angular/client
+        - to check angular version : ng v
+    4. Angular project creation : ng new project-name, choose style sheet and ssr(server side rendering)
+        - run an angular project: " ng serve / ng s " inside angular project, to view angular project in browser open http://localhost:4200/
+    5. Angular project files and folder structure
+        -  tsconfig.spec.json, tsconfig.json , tsconfig.app.json : typescript(ts) intallation and testing
+        - package.json file : npm configuration file
+        - package.lock.json file : version details of packages intalled using npm
+        - angular.json file : angular project configuration file
+        - node_modules folder : folder is used to hold copies of installed packages using npm in your project 
+        - public folder : can access by all files inside the project
+        - src folder : project related contents
+            - style.css file : used to style globally to all html pages
+            - main.ts file : used to initially render angular component in ui/browser of the project, entry point fil ewhich bootstrap/render root component into html page of angular app
+            - index.html file : entry point for UI of angular app, where only one component selector will works, that is the root component of angular app.
+            - app folder : full angular app related contents 
+                - app.routes.ts file : used to define route for each component in angualr app
+                - app.config.ts file : to enable routing / other features in angular app so that all component can use it.
+                - AppComponent is the root component of angular app, which consist of 4 files (ts , spec.ts, html , css file), are used to display and apply behaviour to teh contetns in browser.
+                    - ts file considers as component file 
+                        - selector : used to display a component html view in browser, used selector as a tad in html page
+                        - import array : contents in import array are used in component html page
+                        - templateUrl : url of component of html page
+                        - styleUrl : url of component of style page
+    6 Decorators in Angular : contents align with @ symbol is known as Decorators, used to provide metadata (data inside data)
+    7. Components : used to display contents in browser
+        - to create angular component : " ng g c component-name " in project terminal
+    8. Data binding : data sharing within a component
+        - One way binding : data sharing from one file to another at a time
+            - ts(component file) file to html(view) file
+                - Interpolation : {{ts class property}} inside html page
+                - Property binding: [attribute-name]= "property-name"
+            - html file to ts file
+                -  Event binding : (eventName)="function-name()"
+                - Event binding using $eevent: (eventName) = "function-name($event)"because "$event"will give you the event occur in DOM
+                - Event binding using template reference variable "#variableName"to a tag, will give you the tag while binding the function
+        - Two way Binding : use ngModel
+    9. Angular Directives : used to modify behaviour of html elements / attributes / properties
+        - 3 types of Directives 
+            - component Directives : need to display component in html page
+                eg: component selector
+            - Attirbute Directives : used to change style of a html elements
+                eg: ngClass - import NgClass in import array of component , used to apply class of style to html elements
+            - Structural Directives : used to add/remove html elements, it should import form angular.common
+                - *ngIf
+                - *ngFor
+                - *ngSwitch
+            - ngModel Directives : used to get values from input tag, import FormsModule in component import array, to use [(ngModel)]= "class Property"
+            -  ngForm Directives : used to get / control properties of form tag
+    10. Control Flow statements : similar to structural directives , no need to import control flow statements to use in component, are used in component html view
+        - @if, @else, @else if 
+        - @for 
+        - @switch 
+    11.Pipes : used to convert date to another format, to use pipe in html use pipe character |
+        - syntax : datatobeConverted pipe-character (|) pipe:naem [: 'options']
+        - Different Pipes
+            - Built in Pipes:date, currency, lowerCase, upperCase etc..
+            - Custom Pipes: use command - ng g p pipe-folder/pipe-name, define logic to convert data to another foramt inside pipe class transform function
+    12. Service : used to share common logic between different components in an angular app.
+        - create service : ng g s service-folder/service-name
+    13. Dependency Injection : used to access properties / functions of a class to another class, DI can be performed only between component and service or component and predefined class in angular. DI is performed inside the constructor argument of a class
+        - syntax: (access-specifiers variable-name:dependent-class-name){}
+    14. Asynchronous function handling in TypeScript : using "Observable" to handle asynchornous functions.
+    Observable can resolve multiple asynchornous function at a time where as promise can only resolve one function at a time. Angular RxJS library is used to resolve asynchornous functions. 
+        - To resolve observable to get response angular uses "subscrible" method, subscribe method argument can be of 2 types, callback function where its argument will give you the response. Otherwise we can use object, its next key value will give you success response, error key value will give server error response.
+    15. API call : use 'HttpClient' class methods will return Observable.
+        - import 'provideHttpClient' inside app.config.ts file, also provide the same
+    16. Interface : used to define custom type of a data in project, command : ng g i folder-name/interface-name
+    17. Angular component lifecycle hooks / methods : we can use hooks inside component without importing
+            - there are 4 life cycle phases
+                1. Creation phase : constructor method
+                2. Change-Detection phase : 
+                    - ngOnInit : Runs once after angular has initialized all the component's inputs.
+                    - ngOnChanges : Runs every time teh component's input have changed
+                    - ngDoCheck : Run every time this component is checked for changes
+                    - ngAfterContentInit : Runs once after the component's content has veen initialized
+                    - ngAfterContentChecked : Run every time this component content has been checked for changes.
+                    - ngAfterViewInit : Runs once after the component's view has been initialized
+                    - ngAfterViewChecked : Runs every time the component's view has been checked for changes.
+                3. Rendering phase :
+                    - afterNextRender : Runs once the next time that all components have been rendered to the DOM
+                    - afterRender : Runs every time all components have been rendered to the DOM.
+                4.Destruction Phase : 
+                    -ngOnDestroy : Runs once before the compnent is destroyed.
+                
+    18. Setup path / route for component in Angular
+        - Define path for component inside app.routes.ts file
+        - Add component path in routes array as object
+            - syntax: {path:"component-path"}, component:component-name
+        - use router-outlet selector in root component html page inorder to switch pages according to the page url
+        - 'routerLink' property used to redirect from one html page to another  in angular app without refreshing the page
+        - set up dynamic routing : use column along
+    19. Parent-Child component data sharing 
+            - parent to child data sharing : only parent properties can be shared with child, to access parent data in child, first child should create a property and it uses input Decorators, Input Decorators is used to get data from parent in child
+            - child to parent data sharing : only child events shared with parent, to share events from child it should use @output Decorators
+    20. Form handling in angular
+        - Template driven forms : first design html part of form, assign form data to component properties, use ngForm , ngModel Directives to manage template driven forms
+        - Model driven forms: first create a model for form inside component class
+            -ex: reactive forms :import reactiveFormsModule in component import array, FormBuilder class consist of reactive form builidng methods. Reactive forms consist of 
+                - From Group : corresponding to form tag
+                - Form Array : form input tobe stored as array
+                - Form Control: used to link html input tag with form group
+
+
+
