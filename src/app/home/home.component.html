@@ -21,14 +21,17 @@
             <a routerLink="/all-recipes">View All</a>
         </div>
         <div class="row my-3">
-            <div class="col-lg-4">
-                <div class="p-3">
-                    <img src="https://www.pngall.com/wp-content/uploads/2/Healthy-Meal.png" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Name</h5>
+            @for (recipe of allRecipes; track $index) {
+                <!-- recipe card -->
+                <div class="col-lg-4">
+                    <div class="p-3">
+                        <img [src]="recipe.image" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{recipe.name}}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 
@@ -58,14 +61,16 @@
 
      <!-- testimonial  -->
       <div class="text-center my-5">
-        <h1>Clinet Testimonials</h1>
+        <h1>Client Testimonials</h1>
         <marquee >
             <div class="d-flex my-5">
                 <!-- testimony -->
-                 <div class="rounded border w-100 p-3 me-2">
-                    <h5>Name</h5>
-                    <p style="white-space: normal; width: 100%; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis aspernatur quibusdam minus voluptas, saepe ipsa? Ipsum, quae qui praesentium natus placeat.</p>
-                 </div>
+                 @for (item of allTestimonies; track $index) {
+                    <div class="rounded border w-100 p-3 me-3">
+                        <h5>{{item.name}}</h5>
+                        <p style="white-space: normal; width: 100%; text-align: justify;">{{item.message}}</p>
+                     </div>
+                 }
             </div>
         </marquee>
       </div>

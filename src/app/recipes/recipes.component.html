@@ -1,1 +1,60 @@
-<p>recipes works!</p>
+<app-header></app-header>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="container">
+                <h4>Filter</h4>
+                <div (click)="getAllRecipes()" class="button btn">All</div>
+                <br>
+                <!-- cuisine -->
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Cuisine Type
+                </button>
+                <div class="collapse my-2" id="collapseExample">
+                        @for (cuisine of cuisineArray; track $index) {
+                            <button (click)="filterAllRecipes('cuisine', cuisine)" class="btn">{{cuisine}}</button>
+                        }
+                </div>
+                <!-- meal type -->
+                 <br>
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    Meal Type
+                </button>
+                <div class="collapse my-2" id="collapseExample1">
+                    @for (mealType of mealTypeArray; track $index) {
+                        <button (click)="filterAllRecipes('mealType', mealType)" class="btn">{{mealType}}</button>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1>All Recipes</h1>
+                <input [(ngModel)]="searchKey" type="text" class="form-control w-50" placeholder="Search your Recipe Name here!!!">
+            </div>
+            <div class="row my-3">
+               @if (allRecipes.length>0) {
+                @for (recipe of allRecipes | search : searchKey | paginate: { itemsPerPage: 12, currentPage: p }; track $index) {
+                    <div class="col-lg-4">
+                        <div class="p-3">
+                            <img (click)="viewRecipe(recipe._id)" [src]="recipe.image" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">{{recipe.name}}</h5>
+                                <p>Cuisine : {{recipe.cuisine}}</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if ((allRecipes | search : searchKey ).length==0) {
+                    <div class="fw-bolder fs-5 my-5 text-danger">Recipe Not Found!!!</div>
+                }
+               }
+               @else {
+                <div class="fw-bolder fs-5 my-5 text-danger">Recipe Not Found!!!</div>
+               }
+            </div>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

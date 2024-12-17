@@ -1,1 +1,74 @@
-<p>contact works!</p>
+<app-header></app-header>
+<div class="container">
+    <div style="height: 350px;" class="bg-success row align-items-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center text-light">
+            <h1>Contact Us</h1>
+            <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minima odio ab fugiat eaque sit soluta quibusdam sed minus iure facere necessitatibus, possimus similique, eum mollitia ratione. 
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div style="height: 650px;" class="row align-items-center my-5">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4 mb-5 mb-lg-0">
+            <h3>Get In Touch</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quasi odio aperiam! Quasi eius expedita, voluptatibus dolorem corrupti accusantium non perferendis rem eligendi. Excepturi dolorum animi deleniti harum blanditiis eos!</p>
+            <!-- icon set -->
+            <div class="d-flex">
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-solid fa-location"></i> </div>
+                <div>
+                    <h5>Address</h5>
+                    <p>NYC 4567, PO Berlin. </p>
+                </div>
+            </div>
+            <!-- icon set -->
+            <div class="d-flex my-3">
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-solid fa-phone"></i> </div>
+                <div>
+                    <h5>Phone Number</h5>
+                    <p>9086754321 </p>
+                </div>
+            </div>
+            <!-- icon set -->
+            <div class="d-flex">
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-solid fa-envelope"></i> </div>
+                <div>
+                    <h5>E Mail</h5>
+                    <p> mail</p>
+                </div>
+            </div>
+            <hr>
+            <h5>Follow Us</h5>
+            <div class="d-flex mt-4">
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-brands fa-facebook-f"></i> </div>
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-brands fa-instagram"></i> </div>
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-brands fa-twitter"></i> </div>
+                <div style="width: 40px; height: 40px;" class="rounded-circle bg-success d-flex justify-content-center align-items-center text-light me-3"> <i class="fa-brands fa-youtube"></i> </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 mb-5 mb-lg-0">
+            <form [formGroup]="testimonyForm" (ngSubmit)="addTestimony()"  class="border rounded shadow p-5">
+                <h3>Client Testimony</h3>
+                <div class="mb-3 mt-5">
+                    <input name="name" formControlName="name"  type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="mb-3 ">
+                    <input name="email" formControlName="email" type="text" class="form-control" placeholder="E Mail">
+                </div>
+                <div class="mb-3 ">
+                    <textarea name="message" formControlName="message"  type="text" class="form-control" placeholder="Message"></textarea> 
+                </div>
+                <p class="my-4 text-secondary">By Submitting, your agreeing the terms and condition of our website. We may use your details in our site.</p>
+                <div class="float-end">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <div class="w-100 my-5"><iframe class="my-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.9816323397044!2d76.34000487362448!3d10.018374072721139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080ffce877d5ef%3A0x8bef6870ad11b98!2sLuminar%20Technolab%2C%20Python%2C%20MERN%20stack%2C%20Software%20Testing%2C%20Data%20science%2C%20Artificial%20intelligence%2C%20asp.net%20training%20in%20kochi!5e0!3m2!1sen!2sin!4v1731405615524!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+<!-- footer -->
+<app-footer></app-footer>

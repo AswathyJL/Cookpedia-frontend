@@ -1,1 +1,49 @@
-<p>register works!</p>
+<div style="height: 100vh;" class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="  mt-5 p-5 rounded w-100">
+                <form [formGroup]="registerForm" (ngSubmit)="register()" class="shadow p-5">
+                    <h2 class="text-center mb-5"><i class="fa-solid fa-graduation-cap"></i> CookPedia</h2>
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Username</label>
+                        <input name="username" formControlName="username" type="text" class="form-control" id="exampleInputName">
+                        @if (registerForm.get('username')?.errors && registerForm.get('username')?.touched) {
+                            <div class="text-danger fw-bolder mb-3">Invalid Username</div>
+                        }
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input name="email" formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      @if (registerForm.get('email')?.errors && registerForm.get('email')?.touched) {
+                        <div class="text-danger fw-bolder mb-3">Invalid Email</div>
+                    }
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input name="password" formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                      @if (registerForm.get('password')?.errors && registerForm.get('password')?.touched) {
+                        <div class="text-danger fw-bolder mb-3">Invalid Password</div>
+                    }
+                    </div>
+                    <button type="submit" class="btn btn-success">Register</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start">
+            <h1 class="fw-bold mb-3">Create New Account</h1>
+            <h4 class="fw-bold mb-5">What you will get?</h4>
+            <ul>
+                <li>Different Recipes</li>
+                <li>Easy way to Make Recipe</li>
+                <li>Save your Favorite Recipes</li>
+                <li>Download your Recipes</li>
+            </ul>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<!-- footer -->
+ <app-footer></app-footer>
+

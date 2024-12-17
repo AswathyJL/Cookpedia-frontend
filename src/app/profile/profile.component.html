@@ -1,1 +1,35 @@
-<p>profile works!</p>
+<app-header></app-header>
+<div class="container my-5">
+    <!-- profile updation -->
+    <div class="my-5">
+        <h1>My Profile</h1>
+        <label>
+            <input (change)="getFile($event)" type="file" style="display: none;">
+            <img  width="200px" height="200px" class="rounded-circle" [src]="profileImg" alt="">
+        </label>
+        <br>
+        <button (click)="updateProfile()" class="btn btn-primary m-3">Upload</button>
+    </div>
+    <!-- download recipe list -->
+    <h3>Download Recipe List</h3>
+    <div class="row my-5">
+        @if (allUserDownloadList.length>0) {
+            @for (recipe of allUserDownloadList; track $index) {
+                <div class="col-lg-3">
+                    <div class="p-3">
+                        <img [src]="recipe.recipeImage" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{recipe.recipeName}}</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        @else {
+            <div class="text-center">
+                <h1>No Recipes downloaded yet!!!</h1>
+            </div>
+        }
+    </div>
+</div>
+<app-footer></app-footer>

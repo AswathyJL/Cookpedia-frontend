@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center my-5 w-100">
+        <h1 class="fw-bold">Login</h1>
+        <h6 class="mt-3">More than 100 plus Recipes from aorund the world</h6>
+        <div class="  mt-5 p-5 rounded w-50">
+            <form [formGroup]="loginForm" (ngSubmit)="login()" class="shadow p-5">
+                <h2 class="text-center mb-5"><i class="fa-solid fa-graduation-cap"></i> CookPedia</h2>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input name="email" formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  @if (loginForm.get('email')?.errors && loginForm.get('email')?.touched) {
+                    <div class="text-danger fw-bolder mb-3">Invalid Email</div>
+                }
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input name="password" formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                  @if (loginForm.get('password')?.errors && loginForm.get('password')?.touched) {
+                    <div class="text-danger fw-bolder mb-3">Invalid Password</div>
+                }
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+ <app-footer></app-footer>

@@ -963,7 +963,12 @@ MULTER: nodejs middleware for handling multipart/form data
             - syntax: {path:"component-path"}, component:component-name
         - use router-outlet selector in root component html page inorder to switch pages according to the page url
         - 'routerLink' property used to redirect from one html page to another  in angular app without refreshing the page
-        - set up dynamic routing : use column along
+        - set up dynamic routing : use column along with variable of url
+        - set up page not found : use path as **
+        - to access dynamic valurs from url associated with a component : 
+            - use ActiviatedRoute class
+            - use ComponentInputBinding(),
+                - in standalone application: inside your app.config
     19. Parent-Child component data sharing 
             - parent to child data sharing : only parent properties can be shared with child, to access parent data in child, first child should create a property and it uses input Decorators, Input Decorators is used to get data from parent in child
             - child to parent data sharing : only child events shared with parent, to share events from child it should use @output Decorators
@@ -974,6 +979,27 @@ MULTER: nodejs middleware for handling multipart/form data
                 - From Group : corresponding to form tag
                 - Form Array : form input tobe stored as array
                 - Form Control: used to link html input tag with form group
+    extra note*********************************************
+    ngx pagination - npm i ngx-pagination
+
+    21. Modules : used to group components, not standalone components they are part of modules, lazy load modules in application
+        - Lazy loading in angular : loading the contents of web pages whenever it requires. It used to reduce initial website loading time.
+        - Generate modules in Angular with routing features : ng g m module-name --routing
+            - create file routing.module.ts : used to set up path / route of the components inside the module
+            - create file module.ts : used to import common packages meeded for components inside the module
+        - Generating components inside a module: ng g c module-name/component-name --no-standalone
+        - Lazy load a module in Angular : define lazy load steps inside app.routes.ts (root routing) file,
+        use the following command
+            - set up lazy loaded path for module should be the file path in app.routes.ts file
+            {
+                path:'module-path',loadChildren:()=>import('module-path').then(m=>m.module-name)            }
+    22. Styling libraries in Angular
+        - Angular Material : Material Design components for Angular - https://material.angular.indexOf
+            - Install - ng add @angular/material
+            - Update style.css file import theme used in angular
+        - Highcharts : to dipaly charts in angular projects
+            - install : npm install highcharts-angular highcharts
+    
 
 
 
