@@ -932,8 +932,9 @@ MULTER: nodejs middleware for handling multipart/form data
             - Custom Pipes: use command - ng g p pipe-folder/pipe-name, define logic to convert data to another foramt inside pipe class transform function
     12. Service : used to share common logic between different components in an angular app.
         - create service : ng g s service-folder/service-name
-    13. Dependency Injection : used to access properties / functions of a class to another class, DI can be performed only between component and service or component and predefined class in angular. DI is performed inside the constructor argument of a class
+    13. Dependency Injection : used to access properties / functions of a class to another class, DI can be performed only between component and service or component and predefined class in angular. DI is performed inside the constructor argument of a class, inside a function dependency injection can be performed with the help of inject method
         - syntax: (access-specifiers variable-name:dependent-class-name){}
+        - Inject method : const variable = inject(Dependent Class)
     14. Asynchronous function handling in TypeScript : using "Observable" to handle asynchornous functions.
     Observable can resolve multiple asynchornous function at a time where as promise can only resolve one function at a time. Angular RxJS library is used to resolve asynchornous functions. 
         - To resolve observable to get response angular uses "subscrible" method, subscribe method argument can be of 2 types, callback function where its argument will give you the response. Otherwise we can use object, its next key value will give you success response, error key value will give server error response.
@@ -1000,6 +1001,8 @@ MULTER: nodejs middleware for handling multipart/form data
         - Highcharts : to dipaly charts in angular projects
             - install : npm install highcharts-angular highcharts
     
-
+    23. Route Guards in Angular : Used to protect route from unauthorised access. It controls navigation to a route based on whether the user is authenticated or not.
+        - CanActivate : It helps in determinig whether a route can be activated or not vased on a condition.
+        - To add guards to angular : ng g g guards-folder/guards-name
 
 

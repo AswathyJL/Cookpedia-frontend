@@ -7,7 +7,7 @@ import { RecipeModel } from '../admin/model/recipeModel';
 })
 export class ApiService {
 
-  server_url = "http://localhost:3000"
+  server_url = "https://cookpedia-server-349y.onrender.com"
 
   constructor(private http:HttpClient) { }
 
@@ -117,6 +117,34 @@ export class ApiService {
   // /recipe/:id/delete
   removeRecipeAPI(id:string){
     return this.http.delete(`${this.server_url}/recipe/${id}/delete`,this.appendToken())
+  }
+
+  // getChartDate
+  getChartData(){
+    this.allDownloadAPI().subscribe((res:any)=>{
+      // code extracting cuisine and its total download count as object and added to an array
+      // input : [{recipeCuisine,count}]
+      //  output : [{name:cuisine, y:totalcount}]
+
+      let downloadArrayList:any = []
+      let output:any = {}
+      res.forEach((item:any)=>{
+        let cuisine = item.recipeCuisine
+        let currentCount = item.count
+        if(output.hasOwnProperty(cuisine)){
+          output[cuisine] += currentCount
+        }else{
+          output[cuisine] = currentCount
+        }
+      })
+      console.log(output);
+      for(let cuisine in output){
+        downloadArrayList.push({name:cuisine, y:output[cuisine]})
+      }
+      console.log(downloadArrayList);
+      localStorage.setItem("chart",JSON.stringify(downloadArrayList))
+    })
+      
   }
 
 }
